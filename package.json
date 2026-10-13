@@ -21,7 +21,7 @@
         "lint": "eslint .",
         "test": "vitest run",
         "test:watch": "vitest",
-        "pack": "npm pack --pack-destination dist"
+        "pack": "mkdir -p dist && npm pack --pack-destination dist"
     },
     "dependencies": {
         "@eslint/js": "^10.0.1",
