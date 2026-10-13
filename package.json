@@ -1,0 +1,65 @@
+{
+    "name": "@ghegar/eslint-config",
+    "version": "0.1.0",
+    "description": "Shared ESLint flat config: 4 spaces, single quotes, semicolons, 300-line files, with React and TypeScript presets.",
+    "license": "MIT",
+    "author": "Edgar Villarreal",
+    "type": "module",
+    "files": [
+        "src"
+    ],
+    "exports": {
+        ".": "./src/base.js",
+        "./react": "./src/react.js",
+        "./ts": "./src/ts.js"
+    },
+    "engines": {
+        "node": "^20.19.0 || ^22.13.0 || >=24"
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "pack": "npm pack --pack-destination dist"
+    },
+    "dependencies": {
+        "@eslint/js": "^10.0.1",
+        "@stylistic/eslint-plugin": "^5.10.0",
+        "globals": "^17.13.0"
+    },
+    "peerDependencies": {
+        "eslint": "^10.0.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-react-hooks": "^7.1.1",
+        "eslint-plugin-react-refresh": "^0.5.7",
+        "typescript-eslint": "^8.71.0"
+    },
+    "peerDependenciesMeta": {
+        "eslint-plugin-jsx-a11y": {
+            "optional": true
+        },
+        "eslint-plugin-react-hooks": {
+            "optional": true
+        },
+        "eslint-plugin-react-refresh": {
+            "optional": true
+        },
+        "typescript-eslint": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "eslint": "^10.12.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-react-hooks": "^7.1.1",
+        "eslint-plugin-react-refresh": "^0.5.7",
+        "typescript": "~6.0.3",
+        "typescript-eslint": "^8.71.2",
+        "vitest": "^5.0.4"
+    },
+    "overrides": {
+        "eslint-plugin-jsx-a11y": {
+            "eslint": "$eslint"
+        }
+    }
+}
