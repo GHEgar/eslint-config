@@ -2,11 +2,12 @@ import { ESLint } from 'eslint';
 import globals from 'globals';
 import base from '../src/base.js';
 import react from '../src/react.js';
+import reactApp from '../src/react-app.js';
 import ts from '../src/ts.js';
 
 const node = [{ languageOptions: { globals: globals.node } }];
 
-export const presets = { base, react, ts, node };
+export const presets = { base, react, reactApp, ts, node };
 
 export function compose(...names) {
     return names.flatMap((name) => presets[name]);

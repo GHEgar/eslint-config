@@ -5,6 +5,17 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 
 ## [No publicado]
 
+## [0.2.0] - 2026-10-13
+
+### Agregado
+
+- Preset `react-app` con `react-refresh/only-export-components`, para apps con Vite.
+
+### Cambiado
+
+- `react` ya no incluye `react-refresh`: en librerías daba warnings sin sentido (un `context.tsx` que
+  exporta provider y hooks, un `main.tsx` de demo). Las apps agregan `react-app` después de `react`.
+
 ## [0.1.0] - 2026-10-13
 
 ### Agregado

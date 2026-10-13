@@ -28,9 +28,10 @@ describe('react', () => {
         expect(await ruleIds(code, file, names)).toEqual(['jsx-a11y/alt-text']);
     });
 
-    it('warns when a component module exports something else', async () => {
+    it('leaves fast refresh out of the library preset', async () => {
         const code = 'export function A() {\n    return null;\n}\nexport function helper() {\n    return 1;\n}\n';
-        expect(await ruleIds(code, file, names)).toEqual(['react-refresh/only-export-components']);
+        expect(await ruleIds(code, file, names)).toEqual([]);
+        expect(await ruleIds(code, file, [...names, 'reactApp'])).toEqual(['react-refresh/only-export-components']);
     });
 
     it('downgrades the React Compiler rules to warnings', async () => {

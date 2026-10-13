@@ -1,6 +1,6 @@
 {
     "name": "@ghegar/eslint-config",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Shared ESLint flat config: 4 spaces, single quotes, semicolons, 300-line files, with React and TypeScript presets.",
     "license": "MIT",
     "author": "Edgar Villarreal",
@@ -11,6 +11,7 @@
     "exports": {
         ".": "./src/base.js",
         "./react": "./src/react.js",
+        "./react-app": "./src/react-app.js",
         "./ts": "./src/ts.js"
     },
     "engines": {
