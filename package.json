@@ -2,6 +2,13 @@
     "name": "@ghegar/eslint-config",
     "version": "0.2.0",
     "description": "Shared ESLint flat config: 4 spaces, single quotes, semicolons, 300-line files, with React and TypeScript presets.",
+    "keywords": [
+        "eslint",
+        "eslint-config",
+        "flat-config",
+        "react",
+        "typescript"
+    ],
     "license": "MIT",
     "author": "Edgar Villarreal",
     "type": "module",
