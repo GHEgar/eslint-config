@@ -5,6 +5,14 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 
 ## [No publicado]
 
+## [0.3.0] - 2026-10-14
+
+### Cambiado
+
+- `base` ignora `test-results/` y `playwright-report/` en cualquier nivel, además de `dist/` y
+  `coverage/`. ESLint no lee `.gitignore` y esas carpetas, con perfiles de Chrome o reportes de
+  Playwright, se linteaban enteras.
+
 ## [0.2.0] - 2026-10-13
 
 ### Agregado

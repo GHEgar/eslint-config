@@ -23,7 +23,7 @@ export const testFiles = [
 export default [
     {
         name: '@ghegar/base/ignores',
-        ignores: ['dist/', 'coverage/'],
+        ignores: ['dist/', 'coverage/', '**/test-results/', '**/playwright-report/'],
     },
     {
         name: '@ghegar/base/recommended',

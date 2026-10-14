@@ -80,6 +80,17 @@ describe('base', () => {
         expect(await ruleIds('console.error(1);\n', file)).toEqual(['no-undef']);
     });
 
+    it('ignores build output and test artifacts', async () => {
+        const { ESLint } = await import('eslint');
+        const { default: base } = await import('../src/base.js');
+        const eslint = new ESLint({ cwd: import.meta.dirname, overrideConfigFile: true, overrideConfig: base });
+        const paths = ['dist/a.js', 'coverage/a.js', 'test-results/a.js', 'playwright-report/a.js', 'packages/x/test-results/a.js'];
+        for (const path of paths) {
+            expect(await eslint.isPathIgnored(path), path).toBe(true);
+        }
+        expect(await eslint.isPathIgnored('src/a.js')).toBe(false);
+    });
+
     it('applies the recommended rules', async () => {
         expect(await ruleIds('export const a = undeclared;\n', file)).toEqual(['no-undef']);
     });

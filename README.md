@@ -111,7 +111,7 @@ as a major version.
 - `no-use-before-define`: same-scope references only, so closures over later declarations pass.
 - `no-console`: only `console.warn` and `console.error`.
 - Node and Vitest globals for `**/*.test.*`, `**/test/**` and `**/tests/**`.
-- Ignores `dist/` and `coverage/`.
+- Ignores `dist/`, `coverage/`, and `test-results/` and `playwright-report/` at any depth.
 
 ## react
 
