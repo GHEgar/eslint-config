@@ -11,6 +11,14 @@
     ],
     "license": "MIT",
     "author": "Edgar Villarreal",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GHEgar/eslint-config.git"
+    },
+    "homepage": "https://github.com/GHEgar/eslint-config#readme",
+    "bugs": {
+        "url": "https://github.com/GHEgar/eslint-config/issues"
+    },
     "type": "module",
     "files": [
         "src"
@@ -69,5 +77,8 @@
         "eslint-plugin-jsx-a11y": {
             "eslint": "$eslint"
         }
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
