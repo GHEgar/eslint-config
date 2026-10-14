@@ -6,7 +6,7 @@ const files = ['**/*.{ts,tsx,mts,cts}'];
 export default [
     ...tseslint.configs.strict.map((config) => ({ ...config, files })),
     {
-        name: '@ghegar/ts/rules',
+        name: '@npmegar/ts/rules',
         files,
         rules: {
             'no-unused-vars': 'off',

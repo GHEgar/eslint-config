@@ -3,7 +3,7 @@ import { files } from './react.js';
 
 export default [
     {
-        name: '@ghegar/react-app/refresh',
+        name: '@npmegar/react-app/refresh',
         files,
         plugins: {
             'react-refresh': reactRefresh,

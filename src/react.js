@@ -8,7 +8,7 @@ const hooksRecommended = reactHooks.configs.flat['recommended-latest'];
 
 export default [
     {
-        name: '@ghegar/react/language',
+        name: '@npmegar/react/language',
         files,
         languageOptions: {
             globals: globals.browser,
@@ -18,7 +18,7 @@ export default [
         },
     },
     {
-        name: '@ghegar/react/hooks',
+        name: '@npmegar/react/hooks',
         files,
         plugins: hooksRecommended.plugins,
         rules: {
@@ -30,7 +30,7 @@ export default [
         },
     },
     {
-        name: '@ghegar/react/a11y',
+        name: '@npmegar/react/a11y',
         files,
         plugins: jsxA11y.flatConfigs.recommended.plugins,
         rules: jsxA11y.flatConfigs.recommended.rules,

@@ -5,6 +5,15 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 
 ## [No publicado]
 
+## [0.4.0] - 2026-10-14
+
+### Cambiado
+
+- El paquete se llama `@npmegar/eslint-config`: el scope `@ghegar` de npm pertenece a otra cuenta.
+  Los imports pasan de `@ghegar/eslint-config/<preset>` a `@npmegar/eslint-config/<preset>`, y los
+  nombres de los bloques de config, de `@ghegar/...` a `@npmegar/...`. Es la primera versión
+  publicada en npm.
+
 ## [0.3.0] - 2026-10-14
 
 ### Cambiado

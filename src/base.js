@@ -22,15 +22,15 @@ export const testFiles = [
 
 export default [
     {
-        name: '@ghegar/base/ignores',
+        name: '@npmegar/base/ignores',
         ignores: ['dist/', 'coverage/', '**/test-results/', '**/playwright-report/'],
     },
     {
-        name: '@ghegar/base/recommended',
+        name: '@npmegar/base/recommended',
         ...js.configs.recommended,
     },
     {
-        name: '@ghegar/base/rules',
+        name: '@npmegar/base/rules',
         languageOptions: {
             ecmaVersion: 'latest',
             sourceType: 'module',
@@ -50,7 +50,7 @@ export default [
         },
     },
     {
-        name: '@ghegar/base/tests',
+        name: '@npmegar/base/tests',
         files: testFiles,
         languageOptions: {
             globals: {

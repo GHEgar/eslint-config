@@ -1,6 +1,6 @@
 # <picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/icon-dark.svg"><img src=".github/assets/icon-light.svg" width="36" height="36" alt=""></picture> eslint-config
 
-[![npm](https://img.shields.io/npm/v/@ghegar/eslint-config)](https://www.npmjs.com/package/@ghegar/eslint-config)
+[![npm](https://img.shields.io/npm/v/@npmegar/eslint-config)](https://www.npmjs.com/package/@npmegar/eslint-config)
 [![license](https://img.shields.io/github/license/GHEgar/eslint-config)](LICENSE)
 
 Shared ESLint flat config: 4 spaces, single quotes, semicolons, 300-line files, with React and TypeScript presets.
@@ -12,17 +12,17 @@ quotes, semicolons and files capped at 300 lines of code. Four presets that comp
 ## Install
 
 ```bash
-npm install -D @ghegar/eslint-config eslint
+npm install -D @npmegar/eslint-config eslint
 ```
 
 Add the peer dependencies of the presets you use:
 
 | Entry | What it adds | Needs |
 |---|---|---|
-| `@ghegar/eslint-config` | `base`: recommended rules, formatting, `max-lines`, test globals | `eslint` |
-| `@ghegar/eslint-config/react` | Browser globals, JSX, React Hooks and accessibility rules | `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` |
-| `@ghegar/eslint-config/react-app` | React Refresh rule for Vite apps | `eslint-plugin-react-refresh` |
-| `@ghegar/eslint-config/ts` | `typescript-eslint` strict rules | `typescript-eslint`, `typescript` |
+| `@npmegar/eslint-config` | `base`: recommended rules, formatting, `max-lines`, test globals | `eslint` |
+| `@npmegar/eslint-config/react` | Browser globals, JSX, React Hooks and accessibility rules | `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` |
+| `@npmegar/eslint-config/react-app` | React Refresh rule for Vite apps | `eslint-plugin-react-refresh` |
+| `@npmegar/eslint-config/ts` | `typescript-eslint` strict rules | `typescript-eslint`, `typescript` |
 
 ```bash
 npm install -D eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-react-refresh typescript-eslint typescript
@@ -46,7 +46,7 @@ npm install -D eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-re
 `eslint.config.js`:
 
 ```js
-import base from '@ghegar/eslint-config';
+import base from '@npmegar/eslint-config';
 
 export default [
     ...base,
@@ -60,10 +60,10 @@ npx eslint .
 ## Composing presets
 
 ```js
-import base from '@ghegar/eslint-config';
-import react from '@ghegar/eslint-config/react';
-import reactApp from '@ghegar/eslint-config/react-app';
-import ts from '@ghegar/eslint-config/ts';
+import base from '@npmegar/eslint-config';
+import react from '@npmegar/eslint-config/react';
+import reactApp from '@npmegar/eslint-config/react-app';
+import ts from '@npmegar/eslint-config/ts';
 
 export default [
     ...base,

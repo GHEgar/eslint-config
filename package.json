@@ -1,6 +1,6 @@
 {
-    "name": "@ghegar/eslint-config",
-    "version": "0.3.0",
+    "name": "@npmegar/eslint-config",
+    "version": "0.4.0",
     "description": "Shared ESLint flat config: 4 spaces, single quotes, semicolons, 300-line files, with React and TypeScript presets.",
     "keywords": [
         "eslint",
