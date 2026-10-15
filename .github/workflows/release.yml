@@ -46,7 +46,11 @@ jobs:
             echo "$name ${TAG#v} was never published to npm"
             exit 0
           fi
-          npm view "$name@${TAG#v}" version > /dev/null 2>&1 || npm publish --provenance --access public
+          npm view "$name@${TAG#v}" version > /dev/null 2>&1 && exit 0
+          latest=$(npm view "$name" dist-tags.latest 2>/dev/null || true)
+          tag=latest
+          if [ -n "$latest" ] && [ "$(printf '%s\n%s\n' "$latest" "${TAG#v}" | sort -V | tail -1)" != "${TAG#v}" ]; then tag=previous; fi
+          npm publish --provenance --access public --tag "$tag"
 
   github-packages:
     runs-on: ubuntu-latest
@@ -64,6 +68,11 @@ jobs:
       - run: npm pkg set name=@ghegar/eslint-config repository.type=git repository.url=git+https://github.com/GHEgar/eslint-config.git
       - run: npm pkg delete publishConfig
       - name: GitHub Packages
-        run: npm view "@ghegar/eslint-config@${TAG#v}" version > /dev/null 2>&1 || npm publish
+        run: |
+          npm view "@ghegar/eslint-config@${TAG#v}" version > /dev/null 2>&1 && exit 0
+          latest=$(npm view "@ghegar/eslint-config" dist-tags.latest 2>/dev/null || true)
+          tag=latest
+          if [ -n "$latest" ] && [ "$(printf '%s\n%s\n' "$latest" "${TAG#v}" | sort -V | tail -1)" != "${TAG#v}" ]; then tag=previous; fi
+          npm publish --tag "$tag"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
