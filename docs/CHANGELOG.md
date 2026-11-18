@@ -5,6 +5,10 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 
 ## [No publicado]
 
+### Corregido
+
+- `minimatch` forzado a 11.0.1 en las dependencias de desarrollo por un aviso de seguridad.
+
 ## [0.4.0] - 2026-10-14
 
 ### Cambiado
