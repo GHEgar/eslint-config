@@ -76,7 +76,8 @@
     "overrides": {
         "eslint-plugin-jsx-a11y": {
             "eslint": "$eslint"
-        }
+        },
+        "minimatch@10": "11.0.1"
     },
     "publishConfig": {
         "access": "public"
